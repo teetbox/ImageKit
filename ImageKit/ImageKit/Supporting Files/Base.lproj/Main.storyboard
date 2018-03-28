@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8e9-Yo-XDU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Second View Controller-->
+        <scene sceneID="n8Y-WQ-sUS">
+            <objects>
+                <viewController id="Rfp-VG-deG" customClass="SecondViewController" customModule="ImageKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCG-Or-g2d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="z1w-Sf-y9R"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="6xY-YJ-JK9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDa-h5-Hgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="611"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="sWa-cu-Anv">
+            <objects>
+                <viewController id="BjI-Gr-muA" customClass="FirstViewController" customModule="ImageKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V6a-c4-Abd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iN9-xq-Zpz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iN9-xq-Zpz" secondAttribute="height" multiplier="2:1" id="HAJ-3a-04X"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-OA-ics">
+                                <rect key="frame" x="155.5" y="217.5" width="63" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="handleUpload:" destination="BjI-Gr-muA" eventType="touchUpInside" id="Vhj-aF-kfQ"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xno-qL-RnM">
+                                <rect key="frame" x="16" y="283.5" width="343" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1M-QI-ZcR">
+                                <rect key="frame" x="173" y="295.5" width="28" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iN9-xq-Zpz" firstAttribute="width" secondItem="V6a-c4-Abd" secondAttribute="width" id="0nC-B6-LBx"/>
+                            <constraint firstItem="Xno-qL-RnM" firstAttribute="centerX" secondItem="V6a-c4-Abd" secondAttribute="centerX" id="7Zd-s0-pS3"/>
+                            <constraint firstItem="x1M-QI-ZcR" firstAttribute="top" secondItem="Xno-qL-RnM" secondAttribute="bottom" constant="10" id="BQi-tE-KeC"/>
+                            <constraint firstItem="iN9-xq-Zpz" firstAttribute="leading" secondItem="YzZ-4g-a3u" secondAttribute="leading" id="Bde-QR-myM"/>
+                            <constraint firstItem="v5h-OA-ics" firstAttribute="centerX" secondItem="V6a-c4-Abd" secondAttribute="centerX" id="FHp-iW-Lxj"/>
+                            <constraint firstItem="Xno-qL-RnM" firstAttribute="top" secondItem="v5h-OA-ics" secondAttribute="bottom" constant="30" id="T45-vx-lRf"/>
+                            <constraint firstItem="x1M-QI-ZcR" firstAttribute="centerX" secondItem="V6a-c4-Abd" secondAttribute="centerX" id="Tx1-NB-cZx"/>
+                            <constraint firstItem="Xno-qL-RnM" firstAttribute="leading" secondItem="V6a-c4-Abd" secondAttribute="leadingMargin" id="XkC-fr-VWb"/>
+                            <constraint firstItem="v5h-OA-ics" firstAttribute="top" secondItem="iN9-xq-Zpz" secondAttribute="bottom" constant="30" id="avd-HD-19b"/>
+                            <constraint firstItem="Xno-qL-RnM" firstAttribute="trailing" secondItem="V6a-c4-Abd" secondAttribute="trailingMargin" id="avk-OP-QE7"/>
+                            <constraint firstItem="iN9-xq-Zpz" firstAttribute="top" secondItem="V6a-c4-Abd" secondAttribute="top" id="ggi-Cq-SYd"/>
+                            <constraint firstItem="iN9-xq-Zpz" firstAttribute="trailing" secondItem="YzZ-4g-a3u" secondAttribute="trailing" id="kuS-Ql-xiF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YzZ-4g-a3u"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="topRated" id="xIM-iy-5aa"/>
+                    <connections>
+                        <outlet property="imageView" destination="iN9-xq-Zpz" id="VDl-Ys-Zla"/>
+                        <outlet property="progressView" destination="Xno-qL-RnM" id="G1s-iF-boc"/>
+                        <outlet property="uploadButton" destination="v5h-OA-ics" id="hTn-9H-tkt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jTK-8c-QU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146.4000000000001" y="-54.422788605697157"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qNh-JM-gj6">
+            <objects>
+                <tabBarController id="8e9-Yo-XDU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cl3-Yt-bMR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BjI-Gr-muA" kind="relationship" relationship="viewControllers" id="2nE-yo-Gov"/>
+                        <segue destination="Rfp-VG-deG" kind="relationship" relationship="viewControllers" id="FWI-t2-Khr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q9W-ok-CAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="143"/>
+        </scene>
+    </scenes>
+</document>
