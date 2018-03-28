@@ -24,6 +24,7 @@ class FirstViewController: UIViewController {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         imagePickerController.sourceType = .photoLibrary
+        imagePickerController.allowsEditing = true
         self.present(imagePickerController, animated: true)
     }
     
@@ -32,7 +33,7 @@ class FirstViewController: UIViewController {
 extension FirstViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        let image = info[UIImagePickerControllerEditedImage] as? UIImage
         imageView.image = image
         
         dismiss(animated: true)
